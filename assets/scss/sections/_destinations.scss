@@ -1,0 +1,238 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Destinations Section
+--------------------------------------------------------------*/
+.destinations {
+  .destination-filters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
+
+    li {
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 50px;
+      border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease-in-out;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        padding: 6px 16px;
+      }
+
+      &:hover,
+      &.filter-active {
+        color: var(--contrast-color);
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+    }
+  }
+
+  .destination-item {
+    a {
+      text-decoration: none;
+    }
+
+    .destination-card {
+      background-color: var(--surface-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease-in-out;
+      height: 100%;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 32px color-mix(in srgb, var(--default-color), transparent 85%);
+      }
+
+      .destination-image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 240px;
+          object-fit: cover;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover img {
+          transform: scale(1.1);
+        }
+
+        .destination-badge {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          padding: 4px 12px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+
+          &.popular {
+            background-color: #ff6b6b;
+            color: white;
+          }
+
+          &.new {
+            background-color: #4ecdc4;
+            color: white;
+          }
+
+          &.adventure {
+            background-color: #ff9f43;
+            color: white;
+          }
+
+          &.romantic {
+            background-color: #ff6b9d;
+            color: white;
+          }
+
+          &.cultural {
+            background-color: #c44569;
+            color: white;
+          }
+
+          &.relaxation {
+            background-color: #6c5ce7;
+            color: white;
+          }
+
+          &.family {
+            background-color: #a29bfe;
+            color: white;
+          }
+
+          &.scenic {
+            background-color: #00b894;
+            color: white;
+          }
+
+          &.urban {
+            background-color: #636e72;
+            color: white;
+          }
+        }
+      }
+
+      .destination-content {
+        padding: 24px;
+
+        h4 {
+          color: var(--heading-color);
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 8px;
+          font-family: var(--heading-font);
+        }
+
+        p {
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          font-size: 14px;
+          line-height: 1.6;
+          margin-bottom: 16px;
+        }
+
+        .destination-meta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          .tours-count {
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+            font-size: 13px;
+          }
+
+          .price-from {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .cta-block {
+    background-color: var(--surface-color);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--default-color), transparent 90%);
+
+    h3 {
+      color: var(--heading-color);
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      font-family: var(--heading-font);
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 12px 32px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+        border-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+        transform: translateY(-2px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 32px 24px;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .destination-item {
+      .destination-card {
+        .destination-content {
+          padding: 20px;
+
+          h4 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

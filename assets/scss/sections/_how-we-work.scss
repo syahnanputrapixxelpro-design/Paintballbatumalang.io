@@ -1,0 +1,121 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# How We Work Section
+--------------------------------------------------------------*/
+.how-we-work {
+  position: relative;
+  overflow: hidden;
+
+  .process-image {
+    position: relative;
+
+    .rounded-custom {
+      border-radius: 30px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 991px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .process-content {
+    .section-heading {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--heading-color);
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .intro-text {
+      font-size: 1.125rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .process-steps {
+    margin-top: 2rem;
+
+    .step-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+
+      @media (max-width: 576px) {
+        gap: 1rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .step-indicator {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+
+        @media (max-width: 576px) {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+      }
+
+      &:hover .step-indicator {
+        transform: scale(1.1);
+      }
+
+      .step-details {
+        h4 {
+          color: var(--heading-color);
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 0.75rem;
+          padding-bottom: 0.75rem;
+          border-bottom: 1px solid color-mix(in srgb, var(--heading-color), transparent 90%);
+
+          @media (max-width: 576px) {
+            font-size: 1.125rem;
+          }
+        }
+
+        p {
+          color: var(--default-color);
+          margin-bottom: 0;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .step-item {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
